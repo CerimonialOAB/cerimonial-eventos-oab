@@ -1,0 +1,104 @@
+/*======================================================
+BANNER DA PÁGINA
+======================================================*/
+
+.banner-pagina{
+
+    background: linear-gradient(rgba(11,58,111,.80), rgba(11,58,111,.80)),
+    url("../img/banner/banner-principal.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 140px 0 90px;
+
+    text-align: center;
+
+    color: #fff;
+
+}
+
+.banner-pagina h1{
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+
+}
+
+.banner-pagina p{
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+}
+
+/*======================================================
+PESQUISA
+======================================================*/
+
+.pesquisa-eventos{
+
+    padding:50px 0;
+
+    background:#f8f9fb;
+
+}
+
+.pesquisa-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.pesquisa-box input{
+
+    flex:1;
+
+    border:none;
+
+    padding:18px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.pesquisa-box button{
+
+    width:70px;
+
+    border:none;
+
+    background:#0B3A6F;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.pesquisa-box button:hover{
+
+    background:#C8102E;
+
+}

@@ -1,0 +1,1866 @@
+/* ==========================
+   RESET
+========================== */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fa;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================
+   RESET
+========================== */
+
+/* =======================================================
+   CORES DO PROJETO
+======================================================= */
+
+:root{
+
+    --cor-primaria: #0B3A6F;      /* Azul OAB */
+
+    --cor-secundaria: #C8102E;    /* Vermelho OAB */
+
+    --cor-branca: #FFFFFF;
+
+    --cor-preta: #1F1F1F;
+
+    --cor-cinza: #F5F5F5;
+
+    --cor-texto: #555555;
+
+}
+
+
+/* =======================================================
+   HEADER
+======================================================= */
+
+header{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Barra superior */
+
+.top-header{
+
+    border-bottom: 1px solid #ececec;
+
+}
+
+.top-header .container{
+
+    height: 80px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+/* Logo */
+
+.logo{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.logo img{
+
+    width: 100px;
+    padding-left: 20px;
+
+}
+
+.logo-text h1{
+
+    font-size: 1.5rem;
+
+    color: #0B3A6F;
+
+    font-weight: 700;
+
+}
+
+.logo-text p{
+
+    margin-top: 4px;
+
+    font-size: .9rem;
+
+    color: #777;
+
+}
+
+/* Botão */
+
+.btn-login{
+
+    background: #A51E22;
+
+    color: #fff;
+
+    padding: 14px 26px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-login:hover{
+
+    background: #8c191d;
+
+}
+
+/* Barra inferior */
+
+.bottom-header{
+
+    background: #ffffff;
+
+}
+
+.bottom-header .container{
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+/* Menu */
+
+.menu{
+
+    display: flex;
+    gap: 45px;
+
+}
+
+.menu a{
+
+    
+
+    color: #333;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+    position: relative;
+
+}
+
+.menu a.ativo,
+.menu-mobile a.ativo{
+
+    color:#C8102E;
+    font-weight:700;
+
+}
+
+.menu a:hover{
+
+    color: #A51E22;
+
+}
+
+/* Linha animada */
+
+.menu a::after{
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #A51E22;
+
+    transition: .3s;
+
+}
+
+.menu a:hover::after{
+
+    width: 100%;
+
+}
+
+/* =======================================================
+   BANNER PRINCIPAL
+======================================================= */
+
+#banner{
+    width: 100%;
+    min-height: 80vh;
+    height: 650px;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../img/banner/banner-oab.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.banner-overlay{
+    width: 100%;
+}
+
+.banner-content{
+    max-width: 650px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.banner-subtitulo{
+
+    display: inline-block;
+
+    background: rgba(255,255,255,.15);
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    margin-bottom: 20px;
+
+    font-size: 15px;
+
+}
+
+.banner-content h2{
+
+    font-size: 56px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    font-weight: 500;
+
+}
+
+.banner-content p{
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    margin-bottom: 35px;
+
+}
+
+.banner-buttons{
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.btn-principal{
+
+    background: #a51515fa;
+
+    color: rgb(255, 255, 255);
+
+    padding: 18px 35px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-principal:hover{
+
+    background: #86171b;
+
+}
+
+.btn-secundario{
+
+    border: 2px solid white;
+
+    color: white;
+
+    padding: 18px 35px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-secundario:hover{
+
+    background: white;
+
+    color: #222;
+
+}
+
+/* =======================================================
+   SOBRE O SETOR
+======================================================= */
+
+#sobre{
+
+    padding: 100px 0;
+
+    background: white;
+
+}
+
+.sobre-container{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+.sobre-imagem{
+
+    flex: 1;
+
+}
+
+.sobre-imagem img{
+
+    width: 100%;
+
+    border-radius: 12px;
+
+}
+
+.sobre-conteudo{
+
+    flex: 1;
+
+}
+
+.titulo-secao{
+
+    color: #A51E22;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
+.sobre-conteudo h2{
+
+    font-size: 40px;
+
+    color: #0B3A6F;
+
+    margin: 20px 0;
+
+}
+
+.sobre-conteudo p{
+
+    line-height: 1.8;
+
+    color: #555;
+
+    margin-bottom: 25px;
+
+}
+
+.sobre-conteudo ul{
+
+    margin-bottom: 35px;
+
+}
+
+.sobre-conteudo ul li{
+
+    margin-bottom: 12px;
+
+    color: #333;
+
+    font-weight: 500;
+
+}
+
+/* =======================================================
+   EVENTOS
+======================================================= */
+
+#eventos{
+
+    padding: 100px 0;
+
+    background: #f8f9fa;
+
+}
+
+.titulo-principal{
+
+    font-size: 42px;
+
+    color: #0B3A6F;
+
+    margin: 15px 0 50px;
+
+}
+
+.cards-eventos{
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+.card-evento{
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+
+    transition: .3s;
+
+    flex: 1;
+
+}
+
+.card-evento:hover{
+
+    transform: translateY(-8px);
+
+}
+
+.card-evento img{
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+}
+
+.card-conteudo{
+
+    padding: 25px;
+
+}
+
+.card-conteudo h3{
+
+    color: #0B3A6F;
+
+    margin-bottom: 15px;
+
+}
+
+.card-conteudo p{
+
+    color: #666;
+
+    margin-bottom: 10px;
+
+}
+
+.card-conteudo .btn-principal{
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+}
+
+/* =======================================================
+   GALERIA
+======================================================= */
+
+#galeria{
+
+    padding:100px 0;
+
+    background:#fff;
+
+}
+
+.descricao-secao{
+
+    max-width:700px;
+
+    color:#666;
+
+    margin-bottom:50px;
+
+    line-height:1.8;
+
+}
+
+.galeria-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.galeria-item{
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.galeria-item img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.galeria-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.galeria-botao{
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+
+/* =======================================================
+   EQUIPE
+======================================================= */
+
+#equipe{
+
+    padding:100px 0;
+
+    background:#f8f9fa;
+
+}
+
+.equipe-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.membro{
+
+    background:#fff;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.membro:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.membro img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.membro h3{
+
+    margin-top:20px;
+
+    color:#0B3A6F;
+
+}
+
+.membro span{
+
+    display:block;
+
+    color:#777;
+
+    margin:10px 0 25px;
+
+}
+
+
+/* =======================================================
+   CONTATO
+======================================================= */
+
+#contato{
+
+    padding:100px 0;
+
+    background:#fff;
+
+}
+
+.contato-container{
+
+    display:flex;
+
+    gap:60px;
+
+    margin-top:50px;
+
+}
+
+.contato-info{
+
+    flex:1;
+
+}
+
+.contato-info h3{
+
+    color:#0B3A6F;
+
+    margin-bottom:25px;
+
+}
+
+.contato-info p{
+
+    margin-bottom:18px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+.form-contato{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.form-contato input,
+.form-contato textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.form-contato textarea{
+
+    resize:none;
+
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus{
+
+    border-color:#A51E22;
+
+}
+
+
+/* =======================================================
+   RODAPÉ
+======================================================= */
+
+footer{
+
+    background:#0B3A6F;
+
+    color:#fff;
+
+    padding:70px 0 20px;
+
+}
+
+.footer-container{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+}
+
+.footer-logo{
+
+    width:70px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-col h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-col p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    margin-bottom:10px;
+
+}
+
+.footer-col ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer-col a{
+
+    color:#ddd;
+
+    transition:.3s;
+
+}
+
+.footer-col a:hover{
+
+    color:#fff;
+
+}
+
+.footer-bottom{
+
+    margin-top:60px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+}
+
+.footer-bottom p{
+
+    color:#ddd;
+
+}
+
+
+
+
+/*=========================================================
+parte da responsividade
+=========================================================*/
+
+
+/* =======================================================
+   RESPONSIVIDADE
+======================================================= */
+
+/* Desktop Grande */
+@media (max-width:1400px){
+
+}
+
+/* Notebook */
+@media (max-width:1200px){
+
+    .top-header .container{
+
+    padding:0 30px;
+
+}
+
+.bottom-header .container{
+
+    padding:0 30px;
+
+}
+
+.menu{
+
+    gap:25px;
+
+}
+
+.logo-text h1{
+
+    font-size:28px;
+
+}
+
+.logo-text p{
+
+    font-size:14px;
+
+}
+
+/* =======================================================
+   EQUIPE - NOTEBOOK
+======================================================= */
+
+.equipe-grid{
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+/* =======================================================
+   EVENTOS - NOTEBOOK
+======================================================= */
+
+.cards-eventos{
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+/* =======================================================
+   GALERIA - NOTEBOOK
+======================================================= */
+
+.galeria-grid{
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+/* =======================================================
+   RODAPÉ - NOTEBOOK
+======================================================= */
+
+.footer-container{
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+
+}
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .top-header .container{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    height:auto;
+
+    padding:20px;
+
+    gap:20px;
+
+}
+
+.menu{
+
+    display:none;
+
+}
+
+#menu-toggle{
+
+    display:block;
+
+}
+
+.bottom-header{
+
+    position:relative;
+
+}
+
+.logo{
+
+    justify-content:center;
+
+}
+
+.btn-login{
+
+    width:220px;
+
+    text-align:center;
+
+}
+
+/* =======================================================
+   BANNER - TABLET
+======================================================= */
+
+#banner{
+
+    min-height: 600px;
+
+}
+
+.banner-content{
+
+    max-width: 100%;
+
+    text-align: center;
+
+    padding: 0;
+
+}
+
+.banner-content h2{
+
+    font-size: 46px;
+
+}
+
+.banner-content p{
+
+    font-size: 18px;
+
+}
+
+.banner-buttons{
+
+    justify-content: center;
+
+}
+
+/* =======================================================
+   SOBRE - TABLET
+======================================================= */
+
+.sobre-container{
+
+    flex-direction: column;
+
+    gap: 50px;
+
+}
+
+.sobre-imagem{
+
+    width: 100%;
+
+}
+
+.sobre-conteudo{
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+.sobre-conteudo h2{
+
+    font-size: 34px;
+
+}
+
+.sobre-conteudo ul{
+
+    list-style: none;
+
+}
+
+.sobre-conteudo ul li{
+
+    margin-bottom: 15px;
+
+}
+
+/* =======================================================
+   CONTATO - TABLET
+======================================================= */
+
+.contato-container{
+
+    gap: 40px;
+
+}
+
+.contato-info h3{
+
+    font-size: 24px;
+
+}
+
+.form-contato{
+
+    gap: 15px;
+
+}
+
+}
+
+/* Celular */
+@media (max-width:768px){
+
+    /* =======================================================
+   RODAPÉ - CELULAR
+======================================================= */
+
+footer{
+
+    padding: 60px 0 20px;
+
+}
+
+.footer-container{
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 40px;
+
+}
+
+.footer-logo{
+
+    margin: 0 auto 20px;
+
+    display: block;
+
+}
+
+.footer-col ul{
+
+    align-items: center;
+
+}
+
+.footer-col a{
+
+    display: inline-block;
+
+}
+
+.footer-bottom{
+
+    margin-top: 40px;
+
+}
+
+.footer-bottom p{
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+    /* =======================================================
+   BANNER - CELULAR
+======================================================= */
+
+#banner{
+
+    min-height: 550px;
+
+    padding: 60px 0;
+
+}
+
+.banner-content{
+
+    text-align: center;
+
+}
+
+.banner-subtitulo{
+
+    font-size: 14px;
+
+}
+
+.banner-content h2{
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+}
+
+.banner-content p{
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+.banner-buttons{
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.btn-principal,
+.btn-secundario{
+
+    width: 230px;
+
+    text-align: center;
+
+}
+
+/* =======================================================
+   SOBRE - CELULAR
+======================================================= */
+
+#sobre{
+
+    padding: 70px 0;
+
+}
+
+.sobre-container{
+
+    gap: 35px;
+
+}
+
+.sobre-conteudo h2{
+
+    font-size: 30px;
+
+}
+
+.sobre-conteudo p{
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+.sobre-imagem img{
+
+    border-radius: 10px;
+
+}
+
+/* =======================================================
+   EQUIPE - CELULAR
+======================================================= */
+
+#equipe{
+
+    padding: 70px 0;
+
+}
+
+.equipe-grid{
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+}
+
+.membro{
+
+    max-width: 420px;
+
+    margin: 0 auto;
+
+}
+
+.membro img{
+
+    height: 380px;
+
+}
+
+.membro h3{
+
+    font-size: 22px;
+
+}
+
+.membro span{
+
+    font-size: 16px;
+
+}
+
+/* =======================================================
+   EVENTOS - CELULAR
+======================================================= */
+
+#eventos{
+
+    padding: 70px 0;
+
+}
+
+.cards-eventos{
+
+    grid-template-columns: 1fr;
+
+}
+
+.card-evento{
+
+    max-width: 450px;
+
+    margin: 0 auto;
+
+}
+
+.card-evento img{
+
+    height: 250px;
+
+}
+
+.card-conteudo{
+
+    padding: 20px;
+
+}
+
+.card-conteudo h3{
+
+    font-size: 22px;
+
+}
+
+.card-conteudo p{
+
+    font-size: 16px;
+
+}
+
+.card-conteudo .btn-principal{
+
+    display: block;
+
+    text-align: center;
+
+}
+
+/* =======================================================
+   GALERIA - CELULAR
+======================================================= */
+
+#galeria{
+
+    padding: 70px 0;
+
+}
+
+.galeria-grid{
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+}
+
+.galeria-item{
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+}
+
+.galeria-item img{
+
+    height: 260px;
+
+}
+
+.descricao-secao{
+
+    text-align: center;
+
+}
+
+/* =======================================================
+   CONTATO - CELULAR
+======================================================= */
+
+#contato{
+
+    padding: 70px 0;
+
+}
+
+.contato-container{
+
+    flex-direction: column;
+
+    gap: 40px;
+
+}
+
+.contato-info{
+
+    text-align: center;
+
+}
+
+.form-contato{
+
+    width: 100%;
+
+}
+
+.form-contato input,
+.form-contato textarea,
+.form-contato button{
+
+    width: 100%;
+
+}
+
+}
+
+/* Celular Pequeno */
+@media (max-width:480px){
+
+    /* =======================================================
+   RODAPÉ - CELULAR PEQUENO
+======================================================= */
+
+.footer-col h3{
+
+    font-size: 20px;
+
+}
+
+.footer-col p,
+.footer-col a{
+
+    font-size: 15px;
+
+}
+
+.footer-logo{
+
+    width: 60px;
+
+}
+
+    /* =======================================================
+   CONTATO - CELULAR PEQUENO
+======================================================= */
+
+.contato-info p{
+
+    font-size: 15px;
+
+}
+
+.form-contato input,
+.form-contato textarea{
+
+    padding: 14px;
+
+    font-size: 15px;
+
+}
+
+    /* =======================================================
+   BANNER - CELULAR PEQUENO
+======================================================= */
+
+.banner-content h2{
+
+    font-size: 28px;
+
+}
+
+.banner-content p{
+
+    font-size: 15px;
+
+}
+
+.btn-principal,
+.btn-secundario{
+
+    width: 100%;
+
+    max-width: 220px;
+
+}
+
+/* =======================================================
+   SOBRE - CELULAR PEQUENO
+======================================================= */
+
+.sobre-conteudo h2{
+
+    font-size: 26px;
+
+}
+
+.sobre-conteudo p{
+
+    font-size: 15px;
+
+}
+
+/* =======================================================
+   EQUIPE - CELULAR PEQUENO
+======================================================= */
+
+.membro{
+
+    max-width: 100%;
+
+}
+
+.membro img{
+
+    height: 320px;
+
+}
+
+/* =======================================================
+   EVENTOS - CELULAR PEQUENO
+======================================================= */
+
+.card-evento{
+
+    max-width: 100%;
+
+}
+
+.card-evento img{
+
+    height: 220px;
+
+}
+
+.card-conteudo{
+
+    padding: 18px;
+
+}
+
+/* =======================================================
+   GALERIA - CELULAR PEQUENO
+======================================================= */
+
+.galeria-item{
+
+    max-width: 100%;
+
+}
+
+.galeria-item img{
+
+    height: 220px;
+
+}
+
+}
+
+
+/*======================================================
+MENU MOBILE
+======================================================*/
+
+#menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    color:var(--cor-primaria);
+
+}
+
+.menu-mobile{
+
+    display:none;
+
+    flex-direction:column;
+
+    width:100%;
+
+    background:#fff;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.menu-mobile a{
+
+    padding:18px 25px;
+
+    color:#333;
+
+    text-decoration:none;
+
+    border-bottom:1px solid #eee;
+
+    transition:.3s;
+
+}
+
+.menu-mobile a:hover{
+
+    background:#f4f4f4;
+
+}
+
+.menu-mobile.ativo{
+
+    display:flex;
+
+}
+
+/*======================================================
+RESPONSIVO HEADER
+======================================================*/
+
+@media(max-width:992px){
+
+    .bottom-header{
+
+        display:none;
+
+    }
+
+    .btn-login{
+
+        display:none;
+
+    }
+
+    #menu-toggle{
+
+        display:block;
+
+    }
+
+    .top-header .container{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+    }
+
+}
+
+@media(min-width:993px){
+
+    .menu-mobile{
+
+        display:none!important;
+
+    }
+
+}
+
+
+
+/*======================================================
+BOTÃO VOLTAR AO TOPO
+======================================================*/
+
+#backToTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0B3A6F;
+
+    color:#fff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.20);
+
+}
+
+#backToTop:hover{
+
+    background:#C8102E;
+
+    transform:translateY(-3px);
+
+}
+
+#backToTop.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/*======================================================
+ANIMAÇÕES
+======================================================*/
+
+.animar{
+
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition: all .8s ease;
+
+}
+
+.animar.mostrar{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/*======================================================
+LIGHTBOX
+======================================================*/
+
+#lightbox{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.9);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 9999;
+
+}
+
+#lightbox.ativo{
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#lightbox img{
+
+    max-width: 90%;
+    max-height: 85%;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+
+}
+
+#fechar-lightbox{
+
+    position: absolute;
+
+    top: 25px;
+    right: 40px;
+
+    font-size: 45px;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+#fechar-lightbox:hover{
+
+    color: #C8102E;
+
+}
+
+.galeria-item{
+
+    cursor: pointer;
+
+}
